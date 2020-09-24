@@ -3,7 +3,7 @@ class Emacs < Formula
   homepage "https://www.gnu.org/software/emacs/"
   url "https://github.com/emacs-mirror/emacs.git", :branch => "feature/native-comp"
   version "28.0.50"
-  revision 1
+  revision 2
 
   depends_on "autoconf"   => :build
   depends_on "gnu-sed"    => :build
@@ -25,7 +25,7 @@ class Emacs < Formula
 
   option "with-crash-debug",
          "Append `-g3` to CFLAGS to enable crash debugging"
-  option "with-cocoa",
+  option "without-cocoa",
          "Build a Cocoa version of GNU Emacs"
   option "with-ctags",
          "Don't remove the ctags executable that GNU Emacs provides"
@@ -33,15 +33,15 @@ class Emacs < Formula
          "Build with dbus support"
   option "without-gnutls",
          "Disable gnutls support"
-  option "with-imagemagick",
-         "Build with imagemagick support"
+  option "without-imagemagick",
+         "Build without imagemagick support"
   option "without-librsvg",
          "Disable librsvg support"
-  option "with-mailutils",
+  option "without-mailutils",
          "Build with mailutils support"
   option "without-modules",
          "Disable dynamic modules support"
-  option "with-no-frame-refocus",
+  option "without-no-frame-refocus",
          "Disables frame re-focus (i.e. closing one frame does not refocus another one)"
   option "without-libxml2",
          "Disable libxml2 support"
@@ -93,7 +93,7 @@ class Emacs < Formula
          "Use a modern style icon by Alessandro Roncone"
   option "with-modern-icon-bokehlicia-captiva",
          "Use a modern style icon by Bokehlicia"
-  option "with-modern-icon-nuvola",
+  option "without-modern-icon-nuvola",
          "Use a modern style icon by David Vignoni (Nuvola Icon Theme)"
   option "with-modern-icon-black-gnu-head",
          "Use a modern style icon by Aha-Soft"
